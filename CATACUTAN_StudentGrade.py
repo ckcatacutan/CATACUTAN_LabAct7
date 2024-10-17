@@ -1,11 +1,13 @@
 user_input = input("Please enter your name: ")
-student_grade = input("Enter student's grade: ")
-if student_grade.isdigit():
-        grade = int(student_grade)
+prelim = float(input("Enter your prelim grade: "))
+midterm = float(input("Enter your midterm grade: "))
+finals = float(input("Enter your final grade: "))
+grade = (prelim + midterm + finals) /3
+
         
-        if grade < 40 or grade > 100:
+if grade < 40 or grade > 100:
             print("Error. Grade must be in the range of 40-100 only.")
-        else:
+else:
             if 99 <= grade <= 100:
                 print("Excellent! Your Final Grade is 1.0")
             elif 96 <= grade <= 98:
@@ -26,6 +28,5 @@ if student_grade.isdigit():
                 print("You passed. Your Final Grade is: 3.0")
             elif 40 <= grade <= 74:
                 print("Sorry, you failed. Your Final Grade is: 5.0")                   
-else:
-    print("Error. Please enter a valid number.")    
+  
                    
